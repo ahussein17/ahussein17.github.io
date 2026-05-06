@@ -4,33 +4,148 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ammar Hussein | Mechanical Engineer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 40px auto; max-width: 800px; padding: 0 20px; color: #333; }
-        h1 { color: #0056b3; }
-        h2 { color: #555; font-size: 1.2em; }
-        .project { background: #f4f4f4; padding: 15px; border-radius: 5px; margin-bottom: 20px; }
+        :root {
+            --primary: #0056b3;
+            --text-main: #333;
+            --text-light: #666;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+        }
+        header {
+            background: linear-gradient(135deg, #003366 0%, #0056b3 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            letter-spacing: 1px;
+        }
+        header h2 {
+            margin: 10px 0 0;
+            font-weight: 300;
+            font-size: 1.2em;
+            color: #e0e0e0;
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .section-title {
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+            color: var(--primary);
+        }
+        .card {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 25px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+        }
+        .card h3 {
+            margin-top: 0;
+            color: #222;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .card h3 span {
+            font-size: 0.8em;
+            font-weight: 400;
+            color: var(--text-light);
+        }
+        .tags {
+            margin-top: 15px;
+        }
+        .tag {
+            display: inline-block;
+            background: #e9ecef;
+            color: #495057;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 0.85em;
+            margin-right: 8px;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        .contact-btn {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            margin-top: 20px;
+        }
+        .contact-btn:hover {
+            background: #004494;
+        }
     </style>
 </head>
 <body>
 
-    <h1>Ammar Hussein</h1>
-    <h2>Mechanical Engineer-in-Training (EIT) | Lean Six Sigma Yellow Belt</h2>
-    <p>Mechanical engineering professional actively seeking EIT roles in the Greater Toronto Area (Toronto/Mississauga). Experienced in EV systems, predictive maintenance, and hydraulic design.</p>
+    <header>
+        <h1>Ammar Hussein</h1>
+        <h2>Mechanical Engineer-in-Training (EIT)</h2>
+        <p>BScE, University of New Brunswick | Lean Six Sigma Yellow Belt</p>
+        <p>Actively seeking EIT opportunities in Toronto & Mississauga (Available May 2026)</p>
+    </header>
 
-    <h3>Featured Technical Work</h3>
-    
-    <div class="project">
-        <h4>Michelin F1 EV Conversion Capstone</h4>
-        <p>Led the design and installation of the braking system for a Formula Ford FF1600 electric conversion. Managed FEA reviews, master cylinder alignment, and specified cold-bite friction materials for hydraulic actuation.</p>
+    <div class="container">
+        <h2 class="section-title">Experience</h2>
+        <div class="card">
+            <h3>Engineering Intern <span>Ganong Bros. Limited</span></h3>
+            <p>Completed two internship terms focusing on manufacturing processes. Developed standard operating procedures (SOPs) and implemented automation solutions to improve production efficiency.</p>
+        </div>
+
+        <h2 class="section-title">Featured Technical Projects</h2>
+        
+        <div class="card">
+            <h3>Michelin F1 EV Conversion Capstone <span>Senior Design Project</span></h3>
+            <p>Leading the design and installation of the braking system for a Formula Ford FF1600 electric conversion. Responsibilities include managing FEA reviews, master cylinder alignment, and specifying cold-bite friction materials for hydraulic actuation.</p>
+            <div class="tags">
+                <span class="tag">Hydraulic Design</span>
+                <span class="tag">FEA</span>
+                <span class="tag">EV Systems</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Bearing Wear & Vibration Analysis Study <span>Independent Research</span></h3>
+            <p>Conducted an independent predictive maintenance study utilizing FFT vibration analysis and ISO 20816-1 standards to identify fault frequencies and assess vibration severity in motors.</p>
+            <div class="tags">
+                <span class="tag">Vibration Analysis</span>
+                <span class="tag">Predictive Maintenance</span>
+                <span class="tag">ISO 20816-1</span>
+            </div>
+        </div>
+
+        <h2 class="section-title">Contact</h2>
+        <p>Ready to bring my hands-on engineering experience to a dynamic team in the GTA.</p>
+        <a href="mailto:your.email@example.com" class="contact-btn">Email Me</a>
+        <a href="https://linkedin.com/in/yourprofile" class="contact-btn" style="background: #0077b5; margin-left: 10px;">LinkedIn</a>
     </div>
-
-    <div class="project">
-        <h4>Bearing Wear & Vibration Analysis Study</h4>
-        <p>Conducted independent predictive maintenance research utilizing FFT vibration analysis and ISO 20816-1 standards to identify fault frequencies and assess motor vibration severity.</p>
-    </div>
-
-    <hr>
-    <p><a href="mailto:your.email@example.com">Contact Me</a></p>
 
 </body>
 </html>
