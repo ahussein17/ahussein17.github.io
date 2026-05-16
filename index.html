@@ -48,7 +48,7 @@
       <div class="content-body">
         <p>I'm a mechanical engineering graduate from UNB who spent two internship terms at Ganong Bros. in St. Stephen working directly on the production floor. Most of my time was spent on automation solutions, diagnosing equipment failures, standardizing procedures and improving OEE across packaging lines.</p>
         <br>
-        <p>I care about the gap between design and production — the part where a good idea has to survive contact with real equipment, real operators and real deadlines. That's where I want to work.</p>
+        <p>I care about the gap between design and production, the part where a good idea has to survive contact with real equipment, real operators and real deadlines. That's where I want to work.</p>
         <br>
         <p class="highlight">Looking for manufacturing or design engineering roles in automotive, industrial equipment or food processing.</p>
       </div>
@@ -180,7 +180,7 @@
 
     if (currentTheme === 'dark') {
       document.body.classList.add('dark-mode');
-      toggleButton.textContent = 'Light Mode ☀';
+      toggleButton.textContent = '☀';
     }
 
     toggleButton.addEventListener('click', () => {
@@ -189,9 +189,9 @@
       
       if (document.body.classList.contains('dark-mode')) {
         theme = 'dark';
-        toggleButton.textContent = 'Light Mode ☀';
+        toggleButton.textContent = '☀';
       } else {
-        toggleButton.textContent = 'Dark Mode ☾';
+        toggleButton.textContent = '☾';
       }
       
       localStorage.setItem('theme', theme);
