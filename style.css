@@ -1,13 +1,10 @@
 :root {
-  --navy: #0033a0;
-  --bg: #f4f5f7; /* Darker background to make cards pop */
-  --card-bg: #ffffff;
-  --text: #1f2937;
-  --text-muted: #6b7280;
-  --border: #e5e7eb;
-  --tag-bg: #f3f4f6;
-  --tag-text: #374151;
-  --radius: 20px; /* Big, soft corners for the Bento Box feel */
+  --bg: #f6f4ee;          /* Warm off-white background */
+  --text: #101114;        /* Near black text */
+  --border: rgba(0, 0, 0, 0.9); /* Heavy borders */
+  --panel: #ffffff;       /* Pure white for cards */
+  --panel-soft: #f1efe7;  /* Slightly darker for tags */
+  --shadow: 3px 3px 0px 1px rgba(0, 0, 0, 0.5); /* The signature hard shadow */
 }
 
 * {
@@ -16,326 +13,204 @@
   padding: 0;
 }
 
-html {
-  font-size: 16px;
-  scroll-behavior: smooth;
-}
-
 body {
   background: var(--bg);
   color: var(--text);
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 0.95rem;
-  line-height: 1.6;
+  font-family: 'Inter', -apple-system, sans-serif;
+  line-height: 1.5;
   padding: 2rem 1.5rem;
 }
 
-/* ── BENTO GRID LAYOUT ── */
-.bento-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-  max-width: 1000px;
+.container {
+  max-width: 800px;
   margin: 0 auto;
-}
-
-.span-1 { grid-column: span 1; }
-.span-2 { grid-column: span 2; }
-.span-3 { grid-column: span 3; }
-
-/* ── CARD STYLING ── */
-.bento-card {
-  background: var(--card-bg);
-  border-radius: var(--radius);
-  padding: 2.25rem;
-  border: 1px solid var(--border);
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  position: relative; /* <-- ADD THIS so the title positions itself relative to the card */
-  margin-top: 1rem; /* <-- ADD THIS to give the overlapping title breathing room */
-}
-
-.bento-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
-}
-
-.bento-card h2 {
-  font-size: 0.95rem;
-  font-weight: 500;
-  font-family: 'JetBrains Mono', monospace;
-  color: var(--text-muted);
-  
-  /* NEW OVERLAP STYLING */
-  position: absolute;
-  top: -0.65rem;     /* Pulls the text exactly onto the border line */
-  left: 2rem;        /* Indents the title from the left edge */
-  background: var(--card-bg); /* Matches the card to "cut" the border behind it */
-  padding: 0 0.75rem; /* Gives space so the border doesn't touch the letters */
-  margin: 0;
-  line-height: 1;
-}
-
-/* ── HERO ── */
-.hero {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  gap: 1.5rem;
 }
 
-.nav-name {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 0.85rem;
-  color: var(--navy);
-  font-weight: 500;
-  margin-bottom: auto;
-}
-
-.hero h1 {
-  font-size: 2.5rem;
-  font-weight: 600;
-  letter-spacing: -0.03em;
-  color: var(--text);
-  margin-top: 2rem;
+/* ── HEADER ── */
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
   margin-bottom: 0.5rem;
 }
 
-.hero-sub {
-  color: var(--text-muted);
-  font-size: 1.05rem;
-  margin-bottom: 0.5rem;
-}
-
-.hero-meta {
-  color: var(--text-muted);
-  font-size: 0.85rem;
+.name {
   font-family: 'JetBrains Mono', monospace;
+  font-size: 1.75rem;
+  font-weight: 700;
 }
 
-/* ── CONTACT LINKS ── */
-.contact-card {
-  display: flex;
-  flex-direction: column;
-}
-
-.contact-links {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  height: 100%;
-  justify-content: center;
-}
-
-.btn {
-  display: inline-block;
-  text-decoration: none;
-  background: var(--bg);
-  color: var(--text);
-  padding: 0.6rem 1rem;
-  border-radius: 8px;
-  font-size: 0.9rem;
-  font-weight: 500;
-  text-align: center;
-  transition: all 0.2s;
-  border: 1px solid var(--border);
-}
-
-.btn:hover {
-  background: var(--border);
-}
-
-.btn-primary {
-  background: var(--navy);
-  color: white;
-  border: none;
-}
-
-.btn-primary:hover {
-  background: #002277;
-}
-
-/* ── TEXT CONTENT ── */
-.text-content p {
-  margin-bottom: 1rem;
-}
-
-.text-content p:last-child {
-  margin-bottom: 0;
-}
-
-.highlight-text {
-  background: #eff6ff;
-  padding: 0.75rem 1rem;
-  border-radius: 8px;
-  border-left: 4px solid var(--navy);
-  color: var(--navy);
-  font-weight: 500;
-}
-
-/* ── SKILLS PILLS ── */
-.skills-stack {
+.links-grid {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
 }
 
-.skill-pill {
-  background: var(--tag-bg);
-  color: var(--tag-text);
-  padding: 0.4rem 0.8rem;
-  border-radius: 20px;
-  font-size: 0.85rem;
-  font-weight: 500;
+.brutal-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.25rem;
+  padding: 0 1rem;
   border: 1px solid var(--border);
+  background: var(--panel);
+  color: var(--text);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  box-shadow: var(--shadow);
+  transition: all 0.1s ease;
 }
 
-/* ── JOBS / EDUCATION ── */
-.job {
-  margin-bottom: 1.5rem;
+.brutal-btn:hover {
+  background: var(--text);
+  color: var(--panel);
 }
 
-.job:last-child { margin-bottom: 0; }
+/* ── SECTIONS (FIELDSETS) ── */
+.terminal-section {
+  border: 1px solid var(--border);
+  padding: 1rem 1.5rem 1.5rem 1.5rem;
+  background: transparent;
+}
 
-.job-header {
+.terminal-section legend {
+  padding: 0 0.75rem;
+  margin-left: -0.5rem;
+}
+
+.command {
+  font-family: 'JetBrains Mono', monospace;
+  font-style: italic;
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--text);
+}
+
+.content-body {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+}
+
+.highlight {
+  background: var(--panel);
+  padding: 0.5rem;
+  border: 1px solid var(--border);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85rem;
+}
+
+/* ── BRUTALIST CARDS (EXPERIENCE/PROJECTS) ── */
+.brutal-card {
+  border: 1px solid var(--border);
+  background: var(--panel);
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.brutal-card:last-child {
+  margin-bottom: 0;
+}
+
+.card-header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 0.5rem;
   gap: 1rem;
+  flex-wrap: wrap;
 }
 
-.job-title {
-  font-weight: 600;
-  display: block;
-  color: var(--text);
+.card-title {
+  font-weight: 700;
+  font-size: 1.05rem;
 }
 
-.job-company {
-  display: block;
-  color: var(--navy);
-  font-size: 0.875rem;
-  margin-top: 0.1rem;
+.card-subtitle {
+  font-size: 0.9rem;
+  opacity: 0.8;
 }
 
-.job-date {
+.card-date {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 0.78rem;
-  color: var(--text-muted);
-  white-space: nowrap;
-  background: var(--bg);
-  padding: 0.2rem 0.5rem;
-  border-radius: 6px;
+  font-size: 0.8rem;
 }
 
-.job ul {
-  list-style: none;
-  padding: 0;
-}
+.mt-2 { margin-top: 0.5rem; }
 
-.job ul li {
-  position: relative;
+.card-list {
+  margin-top: 0.75rem;
   padding-left: 1.25rem;
-  margin-bottom: 0.4rem;
-  color: var(--text-muted);
   font-size: 0.9rem;
 }
 
-.job ul li::before {
-  content: '→';
-  position: absolute;
-  left: 0;
-  color: var(--navy);
+.card-list li {
+  margin-bottom: 0.25rem;
 }
 
-.edu-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
-}
-
-.edu-note {
-  font-size: 0.82rem;
-  color: var(--text-muted);
-  font-family: 'JetBrains Mono', monospace;
+.card-desc {
   margin-top: 0.5rem;
+  font-size: 0.9rem;
 }
 
-/* ── PROJECTS ── */
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-}
-
-.project {
+/* ── SKILLS / TAGS ── */
+.skills-flex {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
-.project-header {
-  margin-bottom: 0.5rem;
-}
-
-.project-title {
+.skill-tag {
+  display: inline-flex;
+  align-items: center;
+  height: 1.75rem;
+  padding: 0 0.6rem;
+  border: 1px solid var(--border);
+  background: var(--panel-soft);
+  font-size: 0.8rem;
   font-weight: 600;
-  color: var(--text);
-  display: block;
-  margin-bottom: 0.5rem;
+  box-shadow: 2px 2px 0 var(--border);
 }
 
-.project-tags {
+.skill-tag.small {
+  height: 1.5rem;
+  font-size: 0.7rem;
+  padding: 0 0.4rem;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.card-tags {
   display: flex;
   gap: 0.4rem;
   flex-wrap: wrap;
 }
 
-.tag {
-  background: #fdf2f8;
-  color: #9d174d;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 0.7rem;
-  padding: 0.2rem 0.5rem;
-  border-radius: 4px;
+.edu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
 }
 
-.project-meta {
-  font-size: 0.78rem;
-  color: var(--text-muted);
-  font-family: 'JetBrains Mono', monospace;
-  margin-bottom: 0.75rem;
-}
-
-.project p:last-child {
-  font-size: 0.9rem;
-  color: var(--text-muted);
+.edu-grid .brutal-card {
+  margin-bottom: 0;
 }
 
 /* ── FOOTER ── */
-footer {
-  padding: 2rem 0;
+.footer {
   text-align: center;
-  font-size: 0.8rem;
-  color: var(--text-muted);
+  margin-top: 2rem;
   font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  opacity: 0.7;
 }
 
 /* ── RESPONSIVE ── */
-@media (max-width: 900px) {
-  .bento-grid {
-    grid-template-columns: repeat(2, 1fr);
+@media (min-width: 600px) {
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
   }
-  .span-3 { grid-column: span 2; }
-  .project-grid { grid-template-columns: 1fr; }
-  .edu-grid { grid-template-columns: 1fr; }
-}
-
-@media (max-width: 600px) {
-  .bento-grid {
-    grid-template-columns: 1fr;
-  }
-  .span-1, .span-2, .span-3 { grid-column: span 1; }
-  
-  .hero h1 { font-size: 2rem; }
-  .job-header { flex-direction: column; }
-  .job-date { margin-top: 0.25rem; }
 }
