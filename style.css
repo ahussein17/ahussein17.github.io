@@ -9,18 +9,12 @@
 
 /* ── DARK MODE VARIABLES ── */
 body.dark-mode {
-  --bg: #0d1016;          /* Deep dark blue/black background */
-  --text: #f5f7fb;        /* Crisp off-white text */
-  --border: rgba(255, 255, 255, 0.9); /* Sharp white borders */
-  --panel: #131823;       /* Dark panel background */
-  --panel-soft: #1f2937;  /* Slightly lighter dark for tags */
-  --shadow: 3px 3px 0px 1px rgba(255, 255, 255, 0.4); /* White hard shadow */
-}
-
-/* Ensure the button looks like a clickable link/button */
-#theme-toggle {
-  cursor: pointer;
-  font-family: inherit;
+  --bg: #0d1016;
+  --text: #f5f7fb;
+  --border: rgba(255, 255, 255, 0.9);
+  --panel: #131823;
+  --panel-soft: #1f2937;
+  --shadow: 3px 3px 0px 1px rgba(255, 255, 255, 0.4);
 }
 
 * {
@@ -79,11 +73,24 @@ body {
   font-weight: 600;
   box-shadow: var(--shadow);
   transition: all 0.1s ease;
+  cursor: pointer;
+  font-family: inherit;
 }
 
 .brutal-btn:hover {
   background: var(--text);
   color: var(--panel);
+}
+
+/* ── LINKEDIN BUTTON OVERRIDES ── */
+.linkedin-btn {
+  background: #0077b5; /* Official LinkedIn Blue */
+  color: #ffffff;
+}
+
+.linkedin-btn:hover {
+  background: #005582; /* Darker blue on hover */
+  color: #ffffff;
 }
 
 /* ── SECTIONS (FIELDSETS) ── */
@@ -98,12 +105,13 @@ body {
   margin-left: -0.5rem;
 }
 
-.command {
-  font-family: 'JetBrains Mono', monospace;
-  font-style: italic;
-  font-size: 1.1rem;
-  font-weight: 400;
+.section-title {
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
   color: var(--text);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 .content-body {
