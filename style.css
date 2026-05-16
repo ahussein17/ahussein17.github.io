@@ -7,6 +7,22 @@
   --shadow: 3px 3px 0px 1px rgba(0, 0, 0, 0.5); /* The signature hard shadow */
 }
 
+/* ── DARK MODE VARIABLES ── */
+body.dark-mode {
+  --bg: #0d1016;          /* Deep dark blue/black background */
+  --text: #f5f7fb;        /* Crisp off-white text */
+  --border: rgba(255, 255, 255, 0.9); /* Sharp white borders */
+  --panel: #131823;       /* Dark panel background */
+  --panel-soft: #1f2937;  /* Slightly lighter dark for tags */
+  --shadow: 3px 3px 0px 1px rgba(255, 255, 255, 0.4); /* White hard shadow */
+}
+
+/* Ensure the button looks like a clickable link/button */
+#theme-toggle {
+  cursor: pointer;
+  font-family: inherit;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
