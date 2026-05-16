@@ -15,30 +15,29 @@
   <main class="container">
     
     <header class="header">
-  <h1 class="name">Ammar Hussein</h1>
-  <div class="links-grid">
-    <a href="https://linkedin.com/in/ammar-hussein-448990256" target="_blank" class="brutal-btn">LinkedIn</a>
-    <a href="https://github.com/ahussein17" target="_blank" class="brutal-btn">GitHub</a>
-    <a href="mailto:ahussein7718@gmail.com" class="brutal-btn">Email</a>
-    <a href="resume.pdf" download class="brutal-btn">CV ↓</a>
-    
-    <button id="theme-toggle" class="brutal-btn">Dark Mode ☾</button>
-  </div>
-</header>
+      <h1 class="name">Ammar Hussein</h1>
+      <div class="links-grid">
+        <a href="https://linkedin.com/in/ammar-hussein-448990256" target="_blank" class="brutal-btn linkedin-btn">LinkedIn</a>
+        <a href="https://github.com/ahussein17" target="_blank" class="brutal-btn">GitHub</a>
+        <a href="mailto:ahussein7718@gmail.com" class="brutal-btn">Email</a>
+        <a href="resume.pdf" download class="brutal-btn">CV ↓</a>
+        <button id="theme-toggle" class="brutal-btn">Dark Mode ☾</button>
+      </div>
+    </header>
 
     <fieldset class="terminal-section">
-      <legend><h2 class="command">cat ~/whoami.md</h2></legend>
+      <legend><h2 class="section-title">About Me</h2></legend>
       <div class="content-body">
         <p>I'm a mechanical engineering graduate from UNB who spent two internship terms at Ganong Bros. in St. Stephen working directly on the production floor. Most of my time was spent on automation solutions, diagnosing equipment failures, standardizing procedures and improving OEE across packaging lines.</p>
         <br>
-        <p>I care about the gap between design and production, the part where a good idea has to survive contact with real equipment, real operators and real deadlines. That's where I want to work.</p>
+        <p>I care about the gap between design and production — the part where a good idea has to survive contact with real equipment, real operators and real deadlines. That's where I want to work.</p>
         <br>
         <p class="highlight">Relocating to Ontario in 2026. Looking for manufacturing or design engineering roles in automotive, industrial equipment or food processing.</p>
       </div>
     </fieldset>
 
     <fieldset class="terminal-section">
-      <legend><h2 class="command">cat ~/skills.json</h2></legend>
+      <legend><h2 class="section-title">Skills</h2></legend>
       <div class="content-body skills-flex">
         <span class="skill-tag">SolidWorks</span>
         <span class="skill-tag">AutoCAD</span>
@@ -51,7 +50,7 @@
     </fieldset>
 
     <fieldset class="terminal-section">
-      <legend><h2 class="command">cat ~/experience.md</h2></legend>
+      <legend><h2 class="section-title">Experience</h2></legend>
       <div class="content-body">
         
         <div class="brutal-card">
@@ -93,7 +92,7 @@
     </fieldset>
 
     <fieldset class="terminal-section">
-      <legend><h2 class="command">ls ~/projects/</h2></legend>
+      <legend><h2 class="section-title">Projects</h2></legend>
       <div class="content-body">
         
         <div class="brutal-card">
@@ -132,7 +131,7 @@
     </fieldset>
 
     <fieldset class="terminal-section">
-      <legend><h2 class="command">cat ~/education.md</h2></legend>
+      <legend><h2 class="section-title">Education</h2></legend>
       <div class="content-body edu-grid">
         
         <div class="brutal-card">
@@ -157,22 +156,19 @@
     <p>Ammar Hussein &middot; Built & Hosted on GitHub Pages</p>
   </footer>
 
-<script>
+  <script>
     const toggleButton = document.getElementById('theme-toggle');
     const currentTheme = localStorage.getItem('theme');
 
-    // 1. Check if the user previously selected dark mode
     if (currentTheme === 'dark') {
       document.body.classList.add('dark-mode');
       toggleButton.textContent = 'Light Mode ☀';
     }
 
-    // 2. Listen for a click on the button
     toggleButton.addEventListener('click', () => {
       document.body.classList.toggle('dark-mode');
       let theme = 'light';
       
-      // 3. Update the text and save preference
       if (document.body.classList.contains('dark-mode')) {
         theme = 'dark';
         toggleButton.textContent = 'Light Mode ☀';
@@ -183,6 +179,5 @@
       localStorage.setItem('theme', theme);
     });
   </script>
-
 </body>
 </html>
