@@ -106,7 +106,7 @@ body {
 }
 
 .section-title {
-  font-family: 'Inter', -apple-system, sans-serif;
+  font-family: 'JetBrains Mono', monospace;
   font-size: 1.15rem;
   font-weight: 700;
   color: var(--text);
