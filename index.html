@@ -7,166 +7,152 @@
   <meta name="description" content="Mechanical engineering graduate from UNB. Manufacturing and design engineering. Relocating to Ontario 2026.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <main class="bento-grid">
-
-    <section class="bento-card span-2 hero">
-      <span class="nav-name">ammarhussein.me</span>
-      <h1>Ammar Hussein</h1>
-      <p class="hero-sub">Mechanical Engineer &middot; UNB BScE &middot; Lean Six Sigma Yellow Belt</p>
-      <p class="hero-meta">St. Stephen, NB &rarr; Ontario &middot; Permanent Resident</p>
-    </section>
-
-    <section class="bento-card span-1 contact-card">
-      <h2><span class="prompt">$</span> connect</h2>
-      <div class="contact-links">
-        <a href="https://linkedin.com/in/ammar-hussein-448990256" target="_blank" class="btn">LinkedIn ↗</a>
-        <a href="https://github.com/ahussein17" target="_blank" class="btn">GitHub ↗</a>
-        <a href="mailto:ahussein7718@gmail.com" class="btn">Email ↗</a>
-        <a href="resume.pdf" download class="btn btn-primary">Download CV ↓</a>
+  <main class="container">
+    
+    <header class="header">
+      <h1 class="name">Ammar Hussein</h1>
+      <div class="links-grid">
+        <a href="https://linkedin.com/in/ammar-hussein-448990256" target="_blank" class="brutal-btn">LinkedIn</a>
+        <a href="https://github.com/ahussein17" target="_blank" class="brutal-btn">GitHub</a>
+        <a href="mailto:ahussein7718@gmail.com" class="brutal-btn">Email</a>
+        <a href="resume.pdf" download class="brutal-btn">CV ↓</a>
       </div>
-    </section>
+    </header>
 
-    <section class="bento-card span-3">
-      <h2><span class="prompt">$</span> whoami</h2>
-      <div class="section-body text-content">
-        <p>
-          I'm a mechanical engineering graduate from UNB who spent two internship terms at Ganong Bros. in St. Stephen working directly on the production floor. Most of my time was spent on automation solutions, diagnosing equipment failures, standardizing procedures and improving OEE across packaging lines. I also led the brake system design for a Formula Ford FF1600 in partnership with Michelin, delivering manufacturing drawings and a full BOM to an external engineering team on a real schedule.
-        </p>
-        <p>
-          I care about the gap between design and production — the part where a good idea has to survive contact with real equipment, real operators and real deadlines. That's where I want to work.
-        </p>
-        <p class="highlight-text">
-          Relocating to Ontario in 2026. Looking for manufacturing or design engineering roles in automotive, industrial equipment or food processing.
-        </p>
+    <fieldset class="terminal-section">
+      <legend><h2 class="command">cat ~/whoami.md</h2></legend>
+      <div class="content-body">
+        <p>I'm a mechanical engineering graduate from UNB who spent two internship terms at Ganong Bros. in St. Stephen working directly on the production floor. Most of my time was spent on automation solutions, diagnosing equipment failures, standardizing procedures and improving OEE across packaging lines.</p>
+        <br>
+        <p>I care about the gap between design and production — the part where a good idea has to survive contact with real equipment, real operators and real deadlines. That's where I want to work.</p>
+        <br>
+        <p class="highlight">Relocating to Ontario in 2026. Looking for manufacturing or design engineering roles in automotive, industrial equipment or food processing.</p>
       </div>
-    </section>
+    </fieldset>
 
-    <section class="bento-card span-1">
-      <h2><span class="prompt">$</span> skills.txt</h2>
-      <div class="section-body skills-stack">
-        <div class="skill-pill">SolidWorks</div>
-        <div class="skill-pill">AutoCAD</div>
-        <div class="skill-pill">MATLAB / Simulink</div>
-        <div class="skill-pill">FFT Vibration Analysis</div>
-        <div class="skill-pill">FEA & LCA</div>
-        <div class="skill-pill">GD&T</div>
-        <div class="skill-pill">Process Improvement</div>
+    <fieldset class="terminal-section">
+      <legend><h2 class="command">cat ~/skills.json</h2></legend>
+      <div class="content-body skills-flex">
+        <span class="skill-tag">SolidWorks</span>
+        <span class="skill-tag">AutoCAD</span>
+        <span class="skill-tag">MATLAB / Simulink</span>
+        <span class="skill-tag">FFT Vibration Analysis</span>
+        <span class="skill-tag">FEA & LCA</span>
+        <span class="skill-tag">GD&T</span>
+        <span class="skill-tag">Process Improvement</span>
       </div>
-    </section>
+    </fieldset>
 
-    <section class="bento-card span-2">
-      <h2><span class="prompt">$</span> experience.md</h2>
-      <div class="section-body">
-        <div class="job">
-          <div class="job-header">
+    <fieldset class="terminal-section">
+      <legend><h2 class="command">cat ~/experience.md</h2></legend>
+      <div class="content-body">
+        
+        <div class="brutal-card">
+          <div class="card-header">
             <div>
-              <span class="job-title">Engineering Intern</span>
-              <span class="job-company">Ganong Bros., Limited</span>
+              <p class="card-title">Ganong Bros., Limited</p>
+              <p class="card-subtitle">Engineering Intern</p>
             </div>
-            <span class="job-date">Apr 2025 – Aug 2025</span>
+            <p class="card-date">Apr 2025 – Aug 2025</p>
           </div>
-          <ul>
+          <ul class="card-list">
             <li>Developed and implemented automation solutions for production equipment, eliminating manual intervention.</li>
             <li>Diagnosed and resolved recurring mechanical and electrical equipment failures to reduce unplanned downtime.</li>
             <li>Wrote and standardized 10+ SOPs for equipment operation and maintenance.</li>
           </ul>
         </div>
-        <div class="job">
-          <div class="job-header">
+
+        <div class="brutal-card">
+          <div class="card-header">
             <div>
-              <span class="job-title">Engineering Summer Student</span>
-              <span class="job-company">Ganong Bros., Limited</span>
+              <p class="card-title">Ganong Bros., Limited</p>
+              <p class="card-subtitle">Engineering Summer Student</p>
             </div>
-            <span class="job-date">May 2023 – Aug 2023</span>
+            <p class="card-date">May 2023 – Aug 2023</p>
           </div>
         </div>
-        <div class="job">
-          <div class="job-header">
+
+        <div class="brutal-card">
+          <div class="card-header">
             <div>
-              <span class="job-title">Compliance Summer Student</span>
-              <span class="job-company">Saint John Energy</span>
+              <p class="card-title">Saint John Energy</p>
+              <p class="card-subtitle">Compliance Summer Student</p>
             </div>
-            <span class="job-date">May 2022 – Sept 2022</span>
+            <p class="card-date">May 2022 – Sept 2022</p>
           </div>
         </div>
+
       </div>
-    </section>
+    </fieldset>
 
-    <section class="bento-card span-3">
-      <h2><span class="prompt">$</span> projects.md</h2>
-      <div class="project-grid">
-        <div class="project">
-          <div class="project-header">
-            <span class="project-title">Race Car Brake System Design</span>
-            <span class="project-tags">
-              <span class="tag">SolidWorks</span>
-              <span class="tag">Thermal Analysis</span>
-            </span>
-          </div>
-          <p class="project-meta">Michelin Partnership</p>
-          <p>Full brake system specification for a Formula Ford FF1600. Selected calipers, rotors, master cylinder and brake lines based on thermal analysis and material properties. Delivered assemblies, manufacturing drawings and BOM.</p>
-        </div>
-
-        <div class="project">
-          <div class="project-header">
-            <span class="project-title">Bearing Wear Analysis</span>
-            <span class="project-tags">
-              <span class="tag">MATLAB</span>
-              <span class="tag">FFT Analysis</span>
-            </span>
-          </div>
-          <p class="project-meta">Independent Study</p>
-          <p>Vibration condition monitoring on a motor with recurring bearing failures. Applied FFT analysis to identify characteristic fault frequencies and classified vibration severity using ISO zone classifications.</p>
-        </div>
-
-        <div class="project">
-          <div class="project-header">
-            <span class="project-title">Stadium 974 LCA</span>
-            <span class="project-tags">
-              <span class="tag">Sustainability</span>
-              <span class="tag">Material Analysis</span>
-            </span>
-          </div>
-          <p class="project-meta">Life Cycle Assessment</p>
-          <p>Led the Life Cycle Inventory phase for Qatar's Stadium 974, quantifying energy savings of 4.38 million kWh and a 95.8% reduction in material production impacts compared to a permanent structure.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="bento-card span-3">
-      <h2><span class="prompt">$</span> education.md</h2>
-      <div class="section-body edu-grid">
-        <div class="job">
-          <div class="job-header">
-            <div>
-              <span class="job-title">BScE, Mechanical Engineering</span>
-              <span class="job-company">University of New Brunswick</span>
+    <fieldset class="terminal-section">
+      <legend><h2 class="command">ls ~/projects/</h2></legend>
+      <div class="content-body">
+        
+        <div class="brutal-card">
+          <div class="card-header">
+            <p class="card-title">Race Car Brake System Design</p>
+            <div class="card-tags">
+              <span class="skill-tag small">SolidWorks</span>
+              <span class="skill-tag small">Thermal Analysis</span>
             </div>
-            <span class="job-date">2021 – 2026</span>
           </div>
-          <p class="edu-note">Dean's List 2025/26 &middot; UNB Saint John Campus Scholarship 2021/22</p>
+          <p class="card-desc">Full brake system specification for a Formula Ford FF1600 in partnership with Michelin. Selected calipers, rotors, master cylinder and brake lines based on thermal analysis and material properties. Delivered assemblies, manufacturing drawings and BOM.</p>
         </div>
-        <div class="job">
-          <div class="job-header">
-            <div>
-              <span class="job-title">Diploma in Tech Management & Entrepreneurship</span>
-              <span class="job-company">University of New Brunswick</span>
+
+        <div class="brutal-card">
+          <div class="card-header">
+            <p class="card-title">Bearing Wear Analysis</p>
+            <div class="card-tags">
+              <span class="skill-tag small">MATLAB</span>
+              <span class="skill-tag small">FFT Analysis</span>
             </div>
-            <span class="job-date">2023 – 2025</span>
           </div>
+          <p class="card-desc">Vibration condition monitoring on a motor with recurring bearing failures. Applied FFT analysis to identify characteristic fault frequencies and classified vibration severity using ISO zone classifications.</p>
         </div>
+
+        <div class="brutal-card">
+          <div class="card-header">
+            <p class="card-title">Stadium 974 LCA</p>
+            <div class="card-tags">
+              <span class="skill-tag small">Sustainability</span>
+            </div>
+          </div>
+          <p class="card-desc">Led the Life Cycle Inventory phase for Qatar's Stadium 974, quantifying energy savings of 4.38 million kWh and a 95.8% reduction in material production impacts compared to a permanent structure.</p>
+        </div>
+
       </div>
-    </section>
+    </fieldset>
+
+    <fieldset class="terminal-section">
+      <legend><h2 class="command">cat ~/education.md</h2></legend>
+      <div class="content-body edu-grid">
+        
+        <div class="brutal-card">
+          <p class="card-title">BScE, Mechanical Engineering</p>
+          <p class="card-subtitle">University of New Brunswick</p>
+          <p class="card-date mt-2">2021 – 2026</p>
+          <p class="card-desc mt-2">Dean's List 2025/26 &middot; UNB Saint John Campus Scholarship</p>
+        </div>
+
+        <div class="brutal-card">
+          <p class="card-title">Diploma in Tech Management</p>
+          <p class="card-subtitle">University of New Brunswick</p>
+          <p class="card-date mt-2">2023 – 2025</p>
+        </div>
+
+      </div>
+    </fieldset>
 
   </main>
 
-  <footer>
-    <p>Ammar Hussein &middot; 2026 &middot; Built & Hosted on GitHub Pages</p>
+  <footer class="footer">
+    <p>Ammar Hussein &middot; Built & Hosted on GitHub Pages</p>
   </footer>
 
 </body>
