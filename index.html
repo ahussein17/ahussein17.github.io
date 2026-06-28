@@ -7,286 +7,204 @@
   <title>Ammar Hussein</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="layout">
+  <main class="container">
 
-    <!-- SIDEBAR -->
-    <aside class="sidebar">
-      <div class="id-block">
-        <div class="id-label">ENG–001</div>
-        <h1 class="name">Ammar<br>Hussein</h1>
-        <p class="title-line">Mechanical Engineer · EIT</p>
-        <p class="location-line">New Brunswick → Open to relocation</p>
-      </div>
-
-      <nav class="nav">
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#education">Education</a>
+    <!-- NAME + LINKS -->
+    <header class="site-header">
+      <h1><a href="/">Ammar Hussein</a></h1>
+      <nav class="header-links">
+        <a href="https://linkedin.com/in/ammar-hussein2" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/ahussein17" target="_blank" rel="noopener">GitHub</a>
+        <a href="mailto:ammar.hussein.me@gmail.com">Email</a>
+        <a href="/resume.pdf" target="_blank" rel="noopener">CV</a>
       </nav>
+    </header>
 
-      <div class="contact-block">
-        <a href="mailto:ahussein67@outlook.com" class="contact-link">ammar.hussein.me@gmail.com</a>
-        <a href="tel:5142109733" class="contact-link">(514) 210-9733</a>
-        <div class="ext-links">
-          <a href="https://linkedin.com/in/ammar-hussein2" target="_blank" rel="noopener">LinkedIn</a>
-          <a href="https://github.com/ahussein17" target="_blank" rel="noopener">GitHub</a>
-          <a href="/resume.pdf" target="_blank" rel="noopener">Resume ↗</a>
+    <!-- ABOUT -->
+    <section class="block">
+      <h2 class="section-label">// ammar.hussein.readme</h2>
+      <div class="about-body">
+        <div class="about-text">
+          <p>
+            I am a mechanical engineer and EIT based in New Brunswick, relocating to Ontario in 2026.
+            Two co-op terms on the production floor at Ganong Bros. — most of my time went into
+            understanding where labour went, why lines failed, and what it would actually cost to fix it.
+          </p>
+          <p>
+            I care about the gap between design and production. The part where intent meets real equipment,
+            real operators, and real deadlines. That is where I want to work.
+          </p>
+          <p>
+            Targeting manufacturing, CI, and mechanical design roles in industrial equipment, automotive,
+            and food processing. Open to relocation anywhere in Canada.
+          </p>
+          <ul class="about-meta">
+            <li>B.Sc.E. Mechanical Engineering, UNB — Dean's List 2025/26</li>
+            <li>Engineer-in-Training (EIT), APEGNB</li>
+            <li>Lean Six Sigma Yellow Belt</li>
+            <li>SolidWorks · FEA · GD&T · MATLAB · Advanced Excel</li>
+          </ul>
         </div>
       </div>
-    </aside>
+    </section>
 
-    <!-- MAIN CONTENT -->
-    <main class="content">
+    <!-- EXPERIENCE -->
+    <section class="block">
+      <h2 class="section-label">// work.history</h2>
 
-      <!-- ABOUT -->
-      <section id="about" class="section">
-        <div class="section-header">
-          <span class="section-code">§ 01</span>
-          <h2 class="section-title">About</h2>
+      <div class="exp-entry">
+        <div class="exp-header">
+          <span class="exp-company">Ganong Bros., Limited</span>
+          <span class="exp-role">Engineering Intern — Process &amp; CI</span>
+          <span class="exp-date">Apr – Aug 2025</span>
         </div>
-        <div class="prose">
-          <p>
-            I am a mechanical engineering graduate from UNB who spent two co-op terms on the production floor at Ganong Bros. Most of my time went into understanding where labour went, why lines failed, and what it would actually cost to fix it.
-          </p>
-          <p>
-            The gap between a good design and a working production process is where I want to work. I care about the handoff — the part where intent meets real equipment, real operators, and real constraints.
-          </p>
-          <p>
-            Currently targeting manufacturing, process, and continuous improvement roles in automotive, industrial equipment, and food processing. Open to relocation anywhere in Canada.
-          </p>
-        </div>
-      </section>
+        <ul class="exp-list">
+          <li>Built a Labour Intensity calculation tool mapping direct labour costs across 276 SKUs and 6 production areas — adopted facility-wide, used to justify a palletizing robot investment.</li>
+          <li>Identified $140K+ in annual labour-savings opportunities through cost-benefit analysis across packaging operations.</li>
+          <li>Reduced VFFS dump-station staffing from 6 to 2 operators across 5 lines by redesigning the feeding process and quantifying direct labour impact.</li>
+          <li>Restored two packaging lines via root cause analysis: rewired a label applicator with a replacement proximity sensor and repurposed a vibratory feeder for dust filtration.</li>
+          <li>Authored 10+ SOPs across multiple packaging lines, standardizing operation across 3 production shifts.</li>
+        </ul>
+      </div>
 
-      <!-- EXPERIENCE -->
-      <section id="experience" class="section">
-        <div class="section-header">
-          <span class="section-code">§ 02</span>
-          <h2 class="section-title">Experience</h2>
+      <div class="exp-entry">
+        <div class="exp-header">
+          <span class="exp-company">Ganong Bros., Limited</span>
+          <span class="exp-role">Engineering Summer Student</span>
+          <span class="exp-date">May – Aug 2023</span>
         </div>
+        <ul class="exp-list">
+          <li>Built an Excel production scheduling tool that digitized shift records and introduced calendar-based weekly scheduling — still in active use 3+ years after handoff.</li>
+          <li>Produced SolidWorks 3D models and AutoCAD 2D manufacturing drawings to support a production line redesign.</li>
+        </ul>
+      </div>
 
-        <div class="experience-entry">
-          <div class="exp-meta">
-            <span class="exp-company">Ganong Bros., Limited</span>
-            <span class="exp-period">Apr 2025 – Aug 2025</span>
+      <div class="exp-entry">
+        <div class="exp-header">
+          <span class="exp-company">Saint John Energy</span>
+          <span class="exp-role">Compliance Summer Student</span>
+          <span class="exp-date">May – Sept 2022</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="block">
+      <h2 class="section-label">// ls ~/projects</h2>
+
+      <div class="project-grid">
+
+        <a href="projects/ff1600.html" class="project-card">
+          <div class="project-img placeholder">
+            <span>FF1600 · renders coming soon</span>
           </div>
-          <div class="exp-role">Engineering Intern — Process &amp; Continuous Improvement</div>
-          <ul class="exp-bullets">
-            <li>Built a Labour Intensity tool mapping direct labour costs across 276 SKUs and 6 production areas — adopted facility-wide and used to justify a palletizing robot investment.</li>
-            <li>Identified $140K+ in annual labour-savings opportunities through cost-benefit analysis across packaging operations.</li>
-            <li>Reduced VFFS dump-station staffing from 6 to 2 operators across 5 lines by redesigning the feeding process and quantifying labour impact.</li>
-            <li>Restored two packaging lines through root cause analysis: rewired a label applicator with a replacement proximity sensor and repurposed a vibratory feeder for dust filtration.</li>
-            <li>Authored 10+ SOPs across multiple packaging lines, standardizing operation across 3 production shifts.</li>
-          </ul>
-        </div>
-
-        <div class="experience-entry">
-          <div class="exp-meta">
-            <span class="exp-company">Ganong Bros., Limited</span>
-            <span class="exp-period">May 2023 – Aug 2023</span>
-          </div>
-          <div class="exp-role">Engineering Summer Student</div>
-          <ul class="exp-bullets">
-            <li>Built an Excel production scheduling tool that digitized shift records and introduced calendar-based weekly work scheduling — still in active use 3+ years after handoff.</li>
-            <li>Produced SolidWorks 3D models and AutoCAD 2D manufacturing drawings to support a production line redesign.</li>
-          </ul>
-        </div>
-
-        <div class="experience-entry">
-          <div class="exp-meta">
-            <span class="exp-company">Saint John Energy</span>
-            <span class="exp-period">May 2022 – Sept 2022</span>
-          </div>
-          <div class="exp-role">Compliance Summer Student</div>
-        </div>
-      </section>
-
-      <!-- PROJECTS -->
-      <section id="projects" class="section">
-        <div class="section-header">
-          <span class="section-code">§ 03</span>
-          <h2 class="section-title">Projects</h2>
-        </div>
-
-        <div class="project-grid">
-
-          <!-- FF1600 -->
-          <a href="projects/ff1600.html" class="project-card featured">
-            <div class="project-card-header">
-              <div class="project-tag">Mechanical Design · FEA · DFM</div>
-              <div class="project-arrow">↗</div>
-            </div>
-            <h3 class="project-name">Formula Ford FF1600<br>Hydraulic Brake System</h3>
+          <div class="project-info">
+            <div class="project-title">Formula Ford FF1600 — Hydraulic Brake System</div>
+            <div class="project-tags">SolidWorks · FEA · ASTM A36 · Michelin Partnership</div>
             <p class="project-desc">
-              Full brake system design and fabrication for Michelin Bridgewater's FF1600. Analytical sizing, component selection, custom bracket fabrication, and static and dynamic validation.
+              Full brake system design and fabrication for Michelin Bridgewater's FF1600. Analytical sizing (2,750 N braking force, 357.5 N·m wheel torque), component selection, custom bracket fabrication, and static and dynamic validation. Minimum factor of safety: 13×.
             </p>
-            <div class="project-stats">
-              <div class="stat">
-                <span class="stat-val">13×</span>
-                <span class="stat-label">Min. factor of safety</span>
-              </div>
-              <div class="stat">
-                <span class="stat-val">2,750 N</span>
-                <span class="stat-label">Braking force achieved</span>
-              </div>
-              <div class="stat">
-                <span class="stat-val">357.5 N·m</span>
-                <span class="stat-label">Wheel torque</span>
-              </div>
+            <div class="project-numbers">
+              <span><strong>13×</strong> min. FOS</span>
+              <span><strong>2,750 N</strong> braking force</span>
+              <span><strong>357.5 N·m</strong> wheel torque</span>
             </div>
-            <div class="project-stack">SolidWorks · FEA · ASTM A36 · Leica RTC360</div>
-          </a>
+          </div>
+        </a>
 
-          <!-- Labour Intensity -->
-          <div class="project-card featured">
-            <div class="project-card-header">
-              <div class="project-tag">Continuous Improvement · Cost Modelling</div>
-            </div>
-            <h3 class="project-name">Labour Intensity<br>Calculation Tool</h3>
+        <div class="project-card">
+          <div class="project-img placeholder">
+            <span>Labour Intensity Tool · internal</span>
+          </div>
+          <div class="project-info">
+            <div class="project-title">Labour Intensity Calculation Tool — Ganong Bros.</div>
+            <div class="project-tags">Advanced Excel · Cost Modelling · Lean / CI</div>
             <p class="project-desc">
-              Facility-wide Excel tool mapping direct labour costs across 276 SKUs and 6 production areas at Ganong Bros. Built from scratch, adopted facility-wide, and used directly to justify a palletizing robot investment.
+              Facility-wide cost model mapping direct labour across 276 SKUs and 6 production areas. Built from scratch during my 2025 co-op, adopted facility-wide, and used to justify the facility palletizer investment.
             </p>
-            <div class="project-stats">
-              <div class="stat">
-                <span class="stat-val">$140K+</span>
-                <span class="stat-label">Annual savings identified</span>
-              </div>
-              <div class="stat">
-                <span class="stat-val">276</span>
-                <span class="stat-label">SKUs mapped</span>
-              </div>
-              <div class="stat">
-                <span class="stat-val">6</span>
-                <span class="stat-label">Production areas</span>
-              </div>
+            <div class="project-numbers">
+              <span><strong>$140K+</strong> savings identified</span>
+              <span><strong>276</strong> SKUs mapped</span>
+              <span><strong>6</strong> production areas</span>
             </div>
-            <div class="project-stack">Advanced Excel · Cost Modelling · Lean / CI</div>
           </div>
+        </div>
 
-          <!-- Bearing Wear -->
-          <div class="project-card">
-            <div class="project-card-header">
-              <div class="project-tag">Reliability · Vibration Analysis</div>
-            </div>
-            <h3 class="project-name">Bearing Failure<br>Root Cause Analysis</h3>
+        <div class="project-card">
+          <div class="project-img placeholder">
+            <span>Bearing RCA · FFT plot coming soon</span>
+          </div>
+          <div class="project-info">
+            <div class="project-title">Bearing Failure Root Cause Analysis</div>
+            <div class="project-tags">MATLAB · FFT · ISO 20816-1</div>
             <p class="project-desc">
-              Diagnosed premature bearing failure in a 5-kW motor by applying FFT analysis to accelerometer data. Isolated shaft resonance at 1,600 Hz as the sole root cause.
+              Diagnosed premature bearing failure in a 5-kW motor by applying FFT analysis to accelerometer data. Isolated shaft resonance at 1,600 Hz as the sole root cause — vibration of 0.0534 m/s² exceeded the allowable 0.0247 m/s² at 4.1 billion cycles.
             </p>
-            <div class="project-stack">MATLAB · FFT · ISO 20816-1</div>
           </div>
+        </div>
 
-          <!-- LCA -->
-          <div class="project-card">
-            <div class="project-card-header">
-              <div class="project-tag">Sustainability · LCA</div>
-            </div>
-            <h3 class="project-name">Stadium 974<br>Life Cycle Assessment</h3>
+        <div class="project-card">
+          <div class="project-img placeholder">
+            <span>Stadium 974 · LCA</span>
+          </div>
+          <div class="project-info">
+            <div class="project-title">Stadium 974 — Life Cycle Assessment</div>
+            <div class="project-tags">LCA · SimaPro · ISO 14040</div>
             <p class="project-desc">
-              Led the Life Cycle Inventory phase for Qatar's Stadium 974, quantifying 4.38 million kWh in energy savings and a 95.8% reduction in material production impacts vs. a permanent structure.
+              Led the Life Cycle Inventory phase for Qatar's Stadium 974. Quantified 4.38 million kWh in energy savings and a 95.8% reduction in material production impacts versus a permanent structure.
             </p>
-            <div class="project-stack">LCA · SimaPro · ISO 14040</div>
-          </div>
-
-        </div>
-      </section>
-
-      <!-- SKILLS -->
-      <section id="skills" class="section">
-        <div class="section-header">
-          <span class="section-code">§ 04</span>
-          <h2 class="section-title">Skills</h2>
-        </div>
-
-        <div class="skills-grid">
-          <div class="skill-group">
-            <div class="skill-group-label">Process &amp; CI</div>
-            <div class="skill-tags">
-              <span>Lean Six Sigma (Yellow Belt)</span>
-              <span>Root Cause Analysis</span>
-              <span>Value Stream Mapping</span>
-              <span>Kaizen</span>
-              <span>5S</span>
-              <span>SOP Development</span>
-              <span>Cost-Benefit Analysis</span>
-              <span>Labour Analysis</span>
-            </div>
-          </div>
-          <div class="skill-group">
-            <div class="skill-group-label">Design &amp; Manufacturing</div>
-            <div class="skill-tags">
-              <span>SolidWorks</span>
-              <span>AutoCAD</span>
-              <span>GD&amp;T</span>
-              <span>FEA</span>
-              <span>Material Selection</span>
-              <span>ASTM A36</span>
-              <span>Reverse Engineering</span>
-              <span>3D Laser Scanning</span>
-            </div>
-          </div>
-          <div class="skill-group">
-            <div class="skill-group-label">Analysis &amp; Tools</div>
-            <div class="skill-tags">
-              <span>MATLAB / Simulink</span>
-              <span>Advanced Excel</span>
-              <span>FFT Vibration Analysis</span>
-              <span>ISO 20816-1</span>
-              <span>S-N Fatigue Analysis</span>
-            </div>
-          </div>
-          <div class="skill-group">
-            <div class="skill-group-label">Languages</div>
-            <div class="skill-tags">
-              <span>English (Native)</span>
-              <span>Arabic (Native)</span>
-              <span>French (Basic)</span>
-            </div>
           </div>
         </div>
-      </section>
 
-      <!-- EDUCATION -->
-      <section id="education" class="section">
-        <div class="section-header">
-          <span class="section-code">§ 05</span>
-          <h2 class="section-title">Education</h2>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="block">
+      <h2 class="section-label">// cat ~/education.md</h2>
+
+      <div class="edu-entry">
+        <div class="edu-line">
+          <span class="edu-degree">B.Sc.E., Mechanical Engineering</span>
+          <span class="edu-school">University of New Brunswick</span>
+          <span class="edu-date">2021 – 2026</span>
         </div>
+        <p class="edu-detail">Dean's List 2025/26 · UNB Saint John Campus Scholarship · Machine Design · Manufacturing Engineering · Mechanics of Materials · Mechanical Vibration · Quality Management · Automotive Technology · CAD</p>
+      </div>
 
-        <div class="edu-entry">
-          <div class="edu-degree">B.Sc.E., Mechanical Engineering</div>
-          <div class="edu-school">University of New Brunswick</div>
-          <div class="edu-meta">2021 – 2026 · Dean's List 2025/26 · UNB Saint John Campus Scholarship</div>
-          <div class="edu-courses">Machine Design · Manufacturing Engineering · Mechanics of Materials · Mechanical Vibration · Quality Management · Automotive Technology · Computer-Aided Design</div>
+      <div class="edu-entry">
+        <div class="edu-line">
+          <span class="edu-degree">Diploma in Technology Management &amp; Entrepreneurship</span>
+          <span class="edu-school">University of New Brunswick</span>
+          <span class="edu-date">2023 – 2025</span>
         </div>
+      </div>
 
-        <div class="edu-entry">
-          <div class="edu-degree">Diploma in Technology Management &amp; Entrepreneurship</div>
-          <div class="edu-school">University of New Brunswick</div>
-          <div class="edu-meta">2023 – 2025</div>
+      <div class="edu-entry">
+        <div class="edu-line">
+          <span class="edu-degree">Engineer-in-Training (EIT)</span>
+          <span class="edu-school">APEGNB</span>
+          <span class="edu-date">Submitted June 2026</span>
         </div>
+      </div>
 
-        <div class="certs-block">
-          <div class="cert-item">
-            <span class="cert-name">Engineer-in-Training (EIT)</span>
-            <span class="cert-body">APEGNB — Submitted June 2026</span>
-          </div>
-          <div class="cert-item">
-            <span class="cert-name">Lean Six Sigma Yellow Belt</span>
-            <span class="cert-body">Innovative Improvement Solutions Inc. · Dec 2023</span>
-          </div>
+      <div class="edu-entry">
+        <div class="edu-line">
+          <span class="edu-degree">Lean Six Sigma Yellow Belt</span>
+          <span class="edu-school">Innovative Improvement Solutions Inc.</span>
+          <span class="edu-date">Dec 2023</span>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <footer class="site-footer">
-        <span>Ammar Hussein · Built on GitHub Pages</span>
-      </footer>
+    <footer class="site-footer">
+      Ammar Hussein · Built &amp; hosted on GitHub Pages
+    </footer>
 
-    </main>
-  </div>
+  </main>
 </body>
 </html>
