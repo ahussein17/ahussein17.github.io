@@ -59,6 +59,10 @@ a:hover { opacity: 0.7; }
   color: var(--black);
 }
 
+html.dark .site-name {
+  color: var(--white);
+}
+
 .header-buttons {
   display: flex;
   flex-wrap: wrap;
@@ -319,6 +323,12 @@ html.dark a.project-card:hover {
 html.dark .exp-entry,
 html.dark .edu-entry {
   border-top-color: #444;
+}
+
+html.dark .exp-meta,
+html.dark .edu-detail,
+html.dark .project-thumb.placeholder span {
+  color: #999;
 }
 
 .project-thumb {
