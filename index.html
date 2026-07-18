@@ -3,235 +3,200 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <meta name="description" content="Ammar Hussein's personal website" />
-  <meta property="og:title" content="Ammar Hussein" />
-  <meta property="og:description" content="Ammar Hussein's personal website" />
-  <meta property="og:type" content="profile" />
-  <meta property="og:url" content="https://ammarhussein.me" />
   <title>Ammar Hussein</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <main class="container">
+  <main class="main">
 
-    <!-- NAME -->
-    <header>
-      <h1><a href="/">Ammar Hussein</a></h1>
-      <nav class="header-links">
-        <a href="https://linkedin.com/in/ammar-hussein2" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="https://github.com/ahussein17" target="_blank" rel="noopener">GitHub</a>
-        <a href="mailto:ammar.hussein.me@gmail.com">Email</a>
-        <a href="/resume.pdf" target="_blank" rel="noopener">CV</a>
-      </nav>
-    </header>
-
-    <!-- WHOAMI -->
-    <section>
-      <h2>###### whoami</h2>
-      <div class="whoami-body">
-        <div class="whoami-text">
-          <p>
-            hey, i'm Ammar — a mechanical engineer and EIT based in New Brunswick,
-            moving to Ontario in 2026.
-          </p>
-          <p>
-            most of my time goes into figuring out where labour is actually going on a production floor,
-            why lines fail, and what it would cost to fix it. i spent two co-op terms at Ganong Bros.
-            doing exactly that — and ended up building a tool that's still running the facility's
-            automation decisions.
-          </p>
-          <p>
-            when i'm not doing that, i'm probably working on my SolidWorks cert,
-            tinkering with robot simulation, or convincing myself a project "will only take a weekend."
-          </p>
-          <p>
-            open to relocation anywhere in Canada. feel free to reach out on LinkedIn.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- EXPERIENCE -->
-    <section>
-      <h2>###### cat ~/experience.md</h2>
-      <p class="section-sub">the more professional-looking part of this</p>
-
-      <div class="exp-entry">
-        <div class="exp-logo-wrap">
-          <img src="assets/experience/ganong.png" alt="Ganong Bros. logo" class="exp-logo" onerror="this.style.display='none'" />
-        </div>
-        <div class="exp-content">
-          <div class="exp-company">Ganong Bros., Limited</div>
-          <div class="exp-role">Engineering Intern — Process &amp; Continuous Improvement</div>
-          <div class="exp-meta">04/2025 – 08/2025 · St. Stephen, NB, On-site</div>
-          <ul class="exp-bullets">
-            <li>built the Labour Intensity tool — maps direct labour costs across 276 SKUs and 6 production areas, adopted facility-wide, used to justify the palletizer investment</li>
-            <li>identified $140K+ in annual labour-savings opportunities across packaging operations</li>
-            <li>reduced VFFS dump-station staffing from 6 to 2 operators across 5 lines by redesigning the feeding process</li>
-            <li>restored two packaging lines via RCA: rewired a label applicator and repurposed a vibratory feeder for dust filtration</li>
-            <li>authored 10+ SOPs standardizing operation across 3 production shifts</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="exp-entry">
-        <div class="exp-logo-wrap">
-          <img src="assets/experience/ganong.png" alt="Ganong Bros. logo" class="exp-logo" onerror="this.style.display='none'" />
-        </div>
-        <div class="exp-content">
-          <div class="exp-company">Ganong Bros., Limited</div>
-          <div class="exp-role">Engineering Summer Student</div>
-          <div class="exp-meta">05/2023 – 08/2023 · St. Stephen, NB, On-site</div>
-          <ul class="exp-bullets">
-            <li>built an Excel production scheduling tool that digitized shift records — still in active use 3+ years after handoff</li>
-            <li>produced SolidWorks 3D models and AutoCAD 2D drawings to support a production line redesign</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="exp-entry">
-        <div class="exp-logo-wrap">
-          <img src="assets/experience/sjenergy.png" alt="Saint John Energy logo" class="exp-logo" onerror="this.style.display='none'" />
-        </div>
-        <div class="exp-content">
-          <div class="exp-company">Saint John Energy</div>
-          <div class="exp-role">Compliance Summer Student</div>
-          <div class="exp-meta">05/2022 – 09/2022 · Saint John, NB, On-site</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- PROJECTS -->
-    <section>
-      <h2>###### ls ~/projects.md</h2>
-      <p class="section-sub">a few things i want people to actually look at</p>
-
-      <div class="project-list">
-
-        <a href="projects/ff1600.html" class="project-card">
-          <div class="project-thumb placeholder">
-            <span>FF1600 · renders coming soon</span>
-          </div>
-          <div class="project-info">
-            <div class="project-title">FF1600 Hydraulic Brake System</div>
-            <p class="project-desc">
-              designed and fabricated a full hydraulic braking system for Michelin Bridgewater's
-              Formula Ford FF1600. analytical sizing, component selection (AP Racing, Girling, Wilwood),
-              custom ASTM A36 brackets, and static + dynamic validation. minimum FOS: 13×.
-            </p>
-            <div class="project-links">
-              <span class="project-tag">SolidWorks · FEA · Michelin Partnership</span>
-            </div>
-            <div class="project-numbers">
-              <span><b>13×</b> min. FOS</span>
-              <span><b>2,750 N</b> braking force</span>
-              <span><b>357.5 N·m</b> wheel torque</span>
-            </div>
-          </div>
+    <!-- HEADER -->
+    <div class="header-row">
+      <a href="/"><h1 class="site-name">Ammar Hussein</h1></a>
+      <div class="header-buttons">
+        <a href="https://linkedin.com/in/ammar-hussein2" target="_blank" rel="noopener" class="btn btn-linkedin">
+          <span class="btn-icon">in</span><span>LinkedIn</span>
         </a>
+        <a href="https://github.com/ahussein17" target="_blank" rel="noopener" class="btn">
+          <span class="btn-icon">&lt;/&gt;</span><span>GitHub</span>
+        </a>
+        <a href="resume.pdf" target="_blank" rel="noopener" class="btn">
+          <span>Resume</span>
+        </a>
+        <button class="btn btn-icon-only" id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+      </div>
+    </div>
 
-        <div class="project-card">
-          <div class="project-thumb placeholder">
-            <span>Labour Intensity Tool · internal</span>
-          </div>
-          <div class="project-info">
-            <div class="project-title">Labour Intensity Calculation Tool</div>
-            <p class="project-desc">
-              facility-wide cost model built at Ganong Bros. during my 2025 co-op. maps direct labour
-              across 276 SKUs and 6 production areas. built from scratch, adopted facility-wide,
-              and used to justify the palletizing robot.
+    <div class="stack">
+
+      <!-- WHOAMI -->
+      <fieldset class="box">
+        <legend><h6 class="box-title">cat README.md</h6></legend>
+        <div class="whoami-row">
+          <article class="whoami-text">
+            <p>
+              I'm a Mechanical Engineer and EIT based in New Brunswick, relocating to Ontario in 2026.
+              I graduated from the University of New Brunswick with a degree in Mechanical Engineering.
             </p>
-            <div class="project-links">
-              <span class="project-tag">Advanced Excel · CI · Cost Modelling</span>
+            <p>
+              I like process improvement, mechanical design, and figuring out where labour actually
+              goes on a production floor. Most of my hands-on time has been at Ganong Bros., where
+              I built a facility-wide labour cost model still used to justify capital decisions.
+            </p>
+            <p>
+              I also like working on my SolidWorks certification, tinkering with robot simulation
+              tools, and picking up projects I probably won't finish on the timeline I planned.
+            </p>
+            <p>
+              I've previously worked at <a href="#">Ganong Bros., Limited</a> and
+              <a href="#">Saint John Energy</a>.
+            </p>
+          </article>
+          <img src="assets/me-small.jpg" alt="me" class="whoami-img" loading="eager" onerror="this.style.display='none'" />
+        </div>
+      </fieldset>
+
+      <!-- EXPERIENCE -->
+      <fieldset class="box">
+        <legend><h6 class="box-title">cat ~/experience.md</h6></legend>
+        <div class="exp-list">
+
+          <div class="exp-entry">
+            <div class="exp-company">Ganong Bros., Limited</div>
+            <div class="exp-role">Engineering Intern — Process &amp; Continuous Improvement</div>
+            <div class="exp-meta">04/2025 – 08/2025 · St. Stephen, NB, On-site</div>
+            <ul>
+              <li>built the Labour Intensity tool — maps direct labour costs across 276 SKUs and 6 production areas, adopted facility-wide, used to justify the palletizer investment</li>
+              <li>identified $140K+ in annual labour-savings opportunities across packaging operations</li>
+              <li>reduced VFFS dump-station staffing from 6 to 2 operators across 5 lines by redesigning the feeding process</li>
+              <li>restored two packaging lines via RCA: rewired a label applicator and repurposed a vibratory feeder for dust filtration</li>
+              <li>authored 10+ SOPs standardizing operation across 3 production shifts</li>
+            </ul>
+          </div>
+
+          <div class="exp-entry">
+            <div class="exp-company">Ganong Bros., Limited</div>
+            <div class="exp-role">Engineering Summer Student</div>
+            <div class="exp-meta">05/2023 – 08/2023 · St. Stephen, NB, On-site</div>
+            <ul>
+              <li>built an Excel production scheduling tool that digitized shift records — still in active use 3+ years after handoff</li>
+              <li>produced SolidWorks 3D models and AutoCAD 2D drawings to support a production line redesign</li>
+            </ul>
+          </div>
+
+          <div class="exp-entry">
+            <div class="exp-company">Saint John Energy</div>
+            <div class="exp-role">Compliance Summer Student</div>
+            <div class="exp-meta">05/2022 – 09/2022 · Saint John, NB, On-site</div>
+          </div>
+
+        </div>
+      </fieldset>
+
+      <!-- PROJECTS -->
+      <fieldset class="box">
+        <legend><h6 class="box-title">ls ~/projects</h6></legend>
+        <div class="project-grid">
+
+          <a href="projects/ff1600.html" class="project-card">
+            <div class="project-thumb placeholder"><span>FF1600 · render coming soon</span></div>
+            <div class="project-card-body">
+              <div class="project-card-title">FF1600 Hydraulic Brake System</div>
+              <p>Full brake system design and fabrication for Michelin Bridgewater's Formula Ford FF1600. 13× min. FOS, custom ASTM A36 brackets.</p>
             </div>
-            <div class="project-numbers">
-              <span><b>$140K+</b> annual savings identified</span>
-              <span><b>276</b> SKUs mapped</span>
+          </a>
+
+          <div class="project-card">
+            <div class="project-thumb placeholder"><span>Labour Intensity · internal</span></div>
+            <div class="project-card-body">
+              <div class="project-card-title">Labour Intensity Tool</div>
+              <p>Facility-wide labour cost model across 276 SKUs at Ganong Bros. $140K+ in savings identified, adopted facility-wide.</p>
             </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-thumb placeholder"><span>FFT plot · coming soon</span></div>
+            <div class="project-card-body">
+              <div class="project-card-title">Bearing Failure RCA</div>
+              <p>Diagnosed premature bearing failure in a 5-kW motor using FFT vibration analysis and ISO 20816-1.</p>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-thumb placeholder"><span>Stadium 974 · LCA</span></div>
+            <div class="project-card-body">
+              <div class="project-card-title">Stadium 974 LCA</div>
+              <p>Life Cycle Inventory for Qatar's Stadium 974 — 4.38M kWh saved, 95.8% material impact reduction vs. permanent structure.</p>
+            </div>
+          </div>
+
+        </div>
+      </fieldset>
+
+      <!-- EDUCATION -->
+      <fieldset class="box">
+        <legend><h6 class="box-title">cat ~/education.md</h6></legend>
+        <div class="edu-list">
+          <div class="edu-entry">
+            <div class="edu-degree">B.Sc.E., Mechanical Engineering</div>
+            <div class="edu-school">University of New Brunswick · 2021 – 2026</div>
+            <div class="edu-detail">Dean's List 2025/26 · UNB Saint John Campus Scholarship</div>
+          </div>
+          <div class="edu-entry">
+            <div class="edu-degree">Diploma in Technology Management &amp; Entrepreneurship</div>
+            <div class="edu-school">University of New Brunswick · 2023 – 2025</div>
+          </div>
+          <div class="edu-entry">
+            <div class="edu-degree">Engineer-in-Training (EIT) · APEGNB</div>
+            <div class="edu-school">Submitted June 2026</div>
+          </div>
+          <div class="edu-entry">
+            <div class="edu-degree">Lean Six Sigma Yellow Belt</div>
+            <div class="edu-school">Innovative Improvement Solutions Inc. · Dec 2023</div>
           </div>
         </div>
+      </fieldset>
 
-        <div class="project-card">
-          <div class="project-thumb placeholder">
-            <span>FFT plot · coming soon</span>
-          </div>
-          <div class="project-info">
-            <div class="project-title">Bearing Failure Root Cause Analysis</div>
-            <p class="project-desc">
-              diagnosed premature bearing failure in a 5-kW motor using FFT analysis on accelerometer
-              data. isolated shaft resonance at 1,600 Hz as the sole root cause — 2× over the allowable
-              fatigue limit at 4.1 billion cycles.
-            </p>
-            <div class="project-links">
-              <span class="project-tag">MATLAB · FFT · ISO 20816-1</span>
-            </div>
-          </div>
-        </div>
+    </div>
 
-        <div class="project-card">
-          <div class="project-thumb placeholder">
-            <span>Stadium 974 · LCA</span>
-          </div>
-          <div class="project-info">
-            <div class="project-title">Stadium 974 — Life Cycle Assessment</div>
-            <p class="project-desc">
-              led the Life Cycle Inventory phase for Qatar's Stadium 974. 4.38 million kWh in energy
-              savings and 95.8% reduction in material production impacts vs. a permanent structure.
-            </p>
-            <div class="project-links">
-              <span class="project-tag">LCA · SimaPro · ISO 14040</span>
-            </div>
-          </div>
-        </div>
+    <div class="spacer"></div>
 
+    <!-- FOOTER -->
+    <fieldset class="box">
+      <legend><h6 class="box-title">cat README.md</h6></legend>
+      <div class="footer-row">
+        <span class="footer-text">
+          Source code on <a href="https://github.com/ahussein17/ahussein17.github.io" target="_blank" rel="noopener">GitHub</a>
+          · Design based on the template by <a href="https://sagarpatil.me" target="_blank" rel="noopener">Sagar Patil</a>
+        </span>
       </div>
-    </section>
-
-    <!-- EDUCATION -->
-    <section>
-      <h2>###### cat ~/education.md</h2>
-
-      <div class="edu-entry">
-        <div class="edu-degree">B.Sc.E., Mechanical Engineering</div>
-        <div class="edu-school">University of New Brunswick · 2021 – 2026</div>
-        <div class="edu-detail">Dean's List 2025/26 · UNB Saint John Campus Scholarship</div>
-        <div class="edu-courses">Machine Design · Manufacturing Engineering · Mechanics of Materials · Mechanical Vibration · Quality Management · Automotive Technology · CAD</div>
-      </div>
-
-      <div class="edu-entry">
-        <div class="edu-degree">Diploma in Technology Management &amp; Entrepreneurship</div>
-        <div class="edu-school">University of New Brunswick · 2023 – 2025</div>
-      </div>
-
-      <div class="edu-entry">
-        <div class="edu-degree">Engineer-in-Training (EIT) · APEGNB</div>
-        <div class="edu-school">Submitted June 2026</div>
-      </div>
-
-      <div class="edu-entry">
-        <div class="edu-degree">Lean Six Sigma Yellow Belt</div>
-        <div class="edu-school">Innovative Improvement Solutions Inc. · Dec 2023</div>
-      </div>
-    </section>
-
-    <!-- LINKS -->
-    <section>
-      <h2>###### cat ~/links.md</h2>
-      <ul class="links-list">
-        <li><a href="mailto:ammar.hussein.me@gmail.com">Email</a></li>
-        <li><a href="https://linkedin.com/in/ammar-hussein2" target="_blank" rel="noopener">LinkedIn</a></li>
-        <li><a href="https://github.com/ahussein17" target="_blank" rel="noopener">GitHub</a></li>
-        <li><a href="/resume.pdf" target="_blank" rel="noopener">CV</a></li>
-      </ul>
-    </section>
-
-    <footer>
-      <p>Ammar Hussein · Built &amp; hosted on GitHub Pages · Design inspired by <a href="https://andrewvu.me" target="_blank" rel="noopener">Andy Vu</a> · Template by <a href="https://sagarpatil.me" target="_blank" rel="noopener">Sagar Patil</a></p>
-    </footer>
+    </fieldset>
 
   </main>
+  <script>
+    (function () {
+      let FF_FOUC_FIX;
+      const root = document.documentElement;
+      const stored = localStorage.getItem("theme");
+      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      if (stored === "dark" || (!stored && prefersDark)) root.classList.add("dark");
+
+      window.addEventListener("DOMContentLoaded", () => {
+        const btn = document.getElementById("theme-toggle");
+        btn.textContent = root.classList.contains("dark") ? "☀️" : "🌙";
+        btn.addEventListener("click", () => {
+          root.classList.toggle("dark");
+          const isDark = root.classList.contains("dark");
+          localStorage.setItem("theme", isDark ? "dark" : "light");
+          btn.textContent = isDark ? "☀️" : "🌙";
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
