@@ -1,13 +1,13 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --bg: #f9f8f5;
+  --bg: #ffffff;
   --ink: #1a1a1a;
-  --ink-2: #3a3a38;
-  --ink-3: #6b6b68;
-  --ink-4: #9b9b98;
-  --accent: #c45c1a;
-  --rule: #e2e0d8;
+  --ink-2: #3a3a3a;
+  --ink-3: #666;
+  --ink-4: #999;
+  --accent: #0070f3;
+  --rule: #e8e8e8;
   --mono: 'IBM Plex Mono', 'Courier New', monospace;
   --sans: 'IBM Plex Sans', system-ui, sans-serif;
 }
@@ -19,7 +19,7 @@ body {
   background: var(--bg);
   color: var(--ink);
   font-size: 15px;
-  line-height: 1.65;
+  line-height: 1.7;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -30,43 +30,39 @@ a {
 
 a:hover { text-decoration: underline; }
 
-/* === LAYOUT === */
+/* === CONTAINER === */
 .container {
-  max-width: 680px;
+  max-width: 640px;
   margin: 0 auto;
-  padding: 3rem 1.5rem 5rem;
+  padding: 3.5rem 1.5rem 6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
 }
 
 /* === HEADER === */
-.site-header {
-  margin-bottom: 3rem;
-}
-
-.site-header h1 {
+header h1 {
   font-family: var(--mono);
-  font-size: 1.4rem;
+  font-size: 1.25rem;
   font-weight: 500;
-  letter-spacing: -0.01em;
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.5rem;
 }
 
-.site-header h1 a {
+header h1 a {
   color: var(--ink);
   text-decoration: none;
 }
 
 .header-links {
   display: flex;
-  gap: 1.25rem;
+  gap: 1.1rem;
   flex-wrap: wrap;
 }
 
 .header-links a {
   font-family: var(--mono);
-  font-size: 12px;
+  font-size: 12.5px;
   color: var(--ink-3);
-  text-decoration: none;
-  transition: color 0.15s;
 }
 
 .header-links a:hover {
@@ -74,53 +70,43 @@ a:hover { text-decoration: underline; }
   text-decoration: none;
 }
 
-/* === SECTION LABEL === */
-.section-label {
+/* === SECTION HEADERS (h6 terminal style) === */
+section h2 {
   font-family: var(--mono);
   font-size: 12px;
   font-weight: 400;
-  color: var(--accent);
-  margin-bottom: 1.25rem;
-  letter-spacing: 0.02em;
-}
-
-/* === BLOCK === */
-.block {
-  margin-bottom: 3.5rem;
-}
-
-/* === ABOUT === */
-.about-text p {
-  color: var(--ink-2);
-  margin-bottom: 0.85rem;
-  max-width: 62ch;
-}
-
-.about-meta {
-  list-style: none;
-  margin-top: 1.25rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.about-meta li {
-  font-family: var(--mono);
-  font-size: 12px;
   color: var(--ink-3);
-  padding-left: 1rem;
-  position: relative;
+  margin-bottom: 1.1rem;
+  letter-spacing: 0.01em;
 }
 
-.about-meta li::before {
-  content: '›';
-  position: absolute;
-  left: 0;
-  color: var(--accent);
+.section-sub {
+  font-size: 13px;
+  color: var(--ink-4);
+  font-style: italic;
+  margin-top: -0.75rem;
+  margin-bottom: 1.25rem;
 }
+
+/* === WHOAMI === */
+.whoami-body {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.whoami-text p {
+  color: var(--ink-2);
+  margin-bottom: 0.75rem;
+  max-width: 58ch;
+}
+
+.whoami-text p:last-child { margin-bottom: 0; }
 
 /* === EXPERIENCE === */
 .exp-entry {
+  display: flex;
+  gap: 1rem;
   margin-bottom: 2rem;
   padding-bottom: 2rem;
   border-bottom: 1px solid var(--rule);
@@ -132,12 +118,17 @@ a:hover { text-decoration: underline; }
   padding-bottom: 0;
 }
 
-.exp-header {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.3rem 1rem;
-  align-items: baseline;
-  margin-bottom: 0.75rem;
+.exp-logo-wrap {
+  flex-shrink: 0;
+  width: 36px;
+  padding-top: 2px;
+}
+
+.exp-logo {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  border-radius: 6px;
 }
 
 .exp-company {
@@ -148,122 +139,124 @@ a:hover { text-decoration: underline; }
 
 .exp-role {
   font-family: var(--mono);
-  font-size: 11px;
+  font-size: 11.5px;
   color: var(--accent);
+  margin-top: 0.1rem;
 }
 
-.exp-date {
-  font-family: var(--mono);
-  font-size: 11px;
+.exp-meta {
+  font-size: 12px;
   color: var(--ink-4);
-  margin-left: auto;
+  margin-top: 0.1rem;
+  margin-bottom: 0.6rem;
 }
 
-.exp-list {
+.exp-bullets {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 0.4rem;
+  gap: 0.35rem;
 }
 
-.exp-list li {
+.exp-bullets li {
   font-size: 13.5px;
   color: var(--ink-2);
-  padding-left: 1.1rem;
+  padding-left: 1rem;
   position: relative;
   line-height: 1.55;
 }
 
-.exp-list li::before {
-  content: '—';
+.exp-bullets li::before {
+  content: '-';
   position: absolute;
   left: 0;
-  color: var(--rule);
+  color: var(--ink-4);
   font-family: var(--mono);
-  font-size: 11px;
-  top: 2px;
 }
 
 /* === PROJECTS === */
-.project-grid {
+.project-list {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.75rem;
 }
 
 .project-card {
   display: flex;
   flex-direction: column;
   gap: 0;
-  border: 1px solid var(--rule);
-  border-radius: 4px;
-  overflow: hidden;
   text-decoration: none;
   color: inherit;
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  overflow: hidden;
   transition: border-color 0.15s;
 }
 
-.project-card:hover {
+a.project-card:hover {
   border-color: var(--accent);
   text-decoration: none;
 }
 
-.project-img {
+.project-thumb {
   width: 100%;
-  aspect-ratio: 16 / 7;
+  aspect-ratio: 16 / 6;
   overflow: hidden;
+  background: #f3f3f3;
 }
 
-.project-img img {
+.project-thumb img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
 
-.project-img.placeholder {
-  background: #eeecea;
+.project-thumb.placeholder {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.project-img.placeholder span {
+.project-thumb.placeholder span {
   font-family: var(--mono);
   font-size: 11px;
   color: var(--ink-4);
 }
 
 .project-info {
-  padding: 1.1rem 1.25rem 1.25rem;
+  padding: 1rem 1.1rem 1.15rem;
 }
 
 .project-title {
   font-weight: 500;
   font-size: 14px;
   color: var(--ink);
-  margin-bottom: 0.3rem;
-}
-
-.project-tags {
-  font-family: var(--mono);
-  font-size: 10px;
-  color: var(--ink-4);
-  letter-spacing: 0.04em;
-  margin-bottom: 0.65rem;
+  margin-bottom: 0.4rem;
 }
 
 .project-desc {
   font-size: 13px;
   color: var(--ink-3);
   line-height: 1.6;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.6rem;
+}
+
+.project-links {
+  margin-bottom: 0.5rem;
+}
+
+.project-tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  color: var(--ink-4);
 }
 
 .project-numbers {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.6rem 1.5rem;
+  gap: 0.4rem 1.25rem;
+  margin-top: 0.3rem;
 }
 
 .project-numbers span {
@@ -272,15 +265,15 @@ a:hover { text-decoration: underline; }
   color: var(--ink-3);
 }
 
-.project-numbers strong {
-  color: var(--accent);
+.project-numbers b {
+  color: var(--ink);
   font-weight: 500;
 }
 
 /* === EDUCATION === */
 .edu-entry {
-  margin-bottom: 1.1rem;
-  padding-bottom: 1.1rem;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
   border-bottom: 1px solid var(--rule);
 }
 
@@ -288,13 +281,6 @@ a:hover { text-decoration: underline; }
   border-bottom: none;
   margin-bottom: 0;
   padding-bottom: 0;
-}
-
-.edu-line {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.25rem 1rem;
-  align-items: baseline;
 }
 
 .edu-degree {
@@ -305,36 +291,51 @@ a:hover { text-decoration: underline; }
 
 .edu-school {
   font-family: var(--mono);
-  font-size: 11px;
-  color: var(--accent);
-}
-
-.edu-date {
-  font-family: var(--mono);
-  font-size: 11px;
-  color: var(--ink-4);
-  margin-left: auto;
+  font-size: 11.5px;
+  color: var(--ink-3);
+  margin-top: 0.1rem;
 }
 
 .edu-detail {
+  font-size: 12.5px;
+  color: var(--ink-4);
+  margin-top: 0.15rem;
+}
+
+.edu-courses {
   font-size: 12px;
   color: var(--ink-4);
-  margin-top: 0.3rem;
   font-style: italic;
+  margin-top: 0.2rem;
+}
+
+/* === LINKS === */
+.links-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.links-list li a {
+  font-family: var(--mono);
+  font-size: 13px;
 }
 
 /* === FOOTER === */
-.site-footer {
+footer p {
   font-family: var(--mono);
   font-size: 11px;
   color: var(--ink-4);
-  padding-top: 2rem;
   border-top: 1px solid var(--rule);
+  padding-top: 1.5rem;
 }
+
+footer a { color: var(--ink-4); }
+footer a:hover { color: var(--accent); text-decoration: none; }
 
 /* === RESPONSIVE === */
 @media (max-width: 480px) {
   .container { padding: 2rem 1rem 4rem; }
-  .exp-date { margin-left: 0; }
-  .edu-date { margin-left: 0; }
+  .whoami-body { flex-direction: column; }
 }
